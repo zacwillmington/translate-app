@@ -1,0 +1,75 @@
+App requirements
+
+Login/sign up page
+
+Overview: 
+    App stores your progress e.g. sum of words written in language, words written correcly etc.
+    A user can translate texts and see incorrect words. If a word is incorrect, a user can hover over the word to see the corrected form. A user can then click on that word to save to words list
+
+- Authentication
+
+- User(account data) - Model
+    - user_id
+    - name
+    - email
+    - native_language
+    - learning_languages
+    - password
+
+- UserMetrics - Model
+    - user_id
+    - word_count: { 
+        english: 10000, french: 2323
+    }
+    - total_words_translated: { 
+        english: 1000, french: 2323
+    }
+    - total_correct_words_written {
+        english: 232,
+        french: 1113
+    }
+    - total_incorrect_words_written {
+        english: 232,
+        french: 1113
+    }
+    - success_rate {
+        english: 30
+    }
+    - flunecy_level {
+        english: A3,
+    }
+
+WordsList - model
+    - user_id
+    - learning_language
+    - word
+
+Grammar corrector app(practising writing in foreign language)
+- built in translator
+- uses the UserMetrics to store the data based on the translated text
+
+- TextStorage(name pedending) Storage for texts to translate - Model
+    - difficulty_level: A3
+    - text_language: Hebrew
+    - 
+
+- TranslatedTextStorage(name pedending) Storage for texts that have been translated - Model
+    - user_id
+    - difficulty_level: A3
+    - text_language: Hebrew
+    - errors TBD
+    - success_rate TBD
+    - correct_words - TBD
+    - word_count
+
+TBD --
+Chatbot app
+- build in translator
+
+(className pending) - Model
+- old_conversations?
+
+
+Steps:
+
+1. Build the app, React/TypeScript frontend and backend(User, UserMetrics, GrammarCorrector)
