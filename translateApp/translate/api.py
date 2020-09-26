@@ -18,8 +18,8 @@ class TranslateViewSet(viewsets.ModelViewSet):
 
     #def getUntranslatedText(self, userId, untranslatedTextId=null, textCategory=any):
 
-    # def getTexts(self):
-    #     return [];
+    def get_texts(self):
+        return [];
 
     # def testTranslatedText(self, userId, translatedText):
     #     query AI endpoing

@@ -3,6 +3,6 @@ from .api import TranslateViewSet
 
 router = routers.DefaultRouter()
 router.register('api/translate', TranslateViewSet, 'translate')
-# router.register('translations', TranslateViewSet, 'getTexts')
+router.register('api/translations', TranslateViewSet, 'getTexts')
 
 urlpatterns = router.urls
